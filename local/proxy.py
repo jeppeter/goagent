@@ -1211,7 +1211,7 @@ def pre_start():
 
 def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    logging.basicConfig(level=logging.DEBUG if common.LISTEN_DEBUGINFO else logging.INFO, format='%(levelname)s - %(asctime)s [%(filename)-10s%(lineno)-5d] %(message)s', datefmt='[%b %d %H:%M:%S]')
+    logging.basicConfig(level=logging.DEBUG if common.LISTEN_DEBUGINFO else logging.INFO, format='%(levelname)s - %(asctime)s [%(filename)-8s %(lineno)4d] %(message)s', datefmt='[%b %d %H:%M:%S]')
     CertUtil.check_ca()
     pre_start()
     sys.stdout.write(common.info())
